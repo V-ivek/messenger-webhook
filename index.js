@@ -44,3 +44,7 @@ app.get('/webhook', (req,res)=>{
         res.sendStatus(403);
     }
 });
+
+app.get('/',(req,res)=> {
+    res.status(200).send("Welcome to Bot47");
+})
