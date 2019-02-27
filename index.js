@@ -28,7 +28,7 @@ app.post('/webhook',(req,res)=>{
 
 app.get('/webhook', (req,res)=>{
     console.log("Tcasd")
-    let VERIFY_TOKEN = "Test";
+    let VERIFY_TOKEN = "EAAF0IK8pFhcBAKtJw8flgA9LuAZAsXEYHaZAnixYlzBf5tTuTFXX7V5upZCsLdxOY9s9AaO8nNiUUn1nv3iW07CcGmdZAW3XGxW3hdI8WALfZBZA55uqMfMH7U0JZBnObizwrOH4Smxz9074ntqMrsuo2P15hzCP5CExiS8mIEG0AZDZD";
     let mode = req.query['hub.mode'];
     let token = req.query['hun.verify_token'];
     let challenge = req.query['hub.challenge'];
