@@ -34,14 +34,15 @@ app.get('/webhook', (req,res)=>{
 
     //Check if a token and mode is in the query string of the request
     if (mode && token) {
-        
-        //Responds with the challenge token from the request
-        console.log("WEBHOOK_VERIFIED");
-        res.status(200).send(challenge);
-        
-    } else {
-        res.sendStatus(403);
-    }
+        //check if mode nad token is correct
+        if(mode === "subscribe" && token === VERIFY_TOKEN){
+            //Responds with the challenge token from the request
+            console.log("WEBHOOK_VERIFIED");
+            res.status(200).send(challenge);
+        } else {
+            res.sendStatus(403);
+        }
+    } 
 });
 
 app.get('/',(req,res)=> {
